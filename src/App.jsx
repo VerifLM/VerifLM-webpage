@@ -75,7 +75,7 @@ export default function App() {
         <pre className="bibtex-placeholder" aria-label="BibTeX citation placeholder"><code>{`@article{veriflm2026,
   title   = {VerifLM: Physically Verified Image-Edit-Guided
           Goal Pose Generation for Robotic Manipulation},
-  author  = {Author One and Author Two and Author Three and Author Four},
+  author  = {Anonymous Authors},
   journal = {arXiv preprint},
   year    = {2026}
 }`}</code></pre>
