@@ -27,17 +27,11 @@ export default function App() {
         <h1>Physically Verified Image-Edit-Guided
           Goal Pose Generation for Robotic Manipulation</h1>
         <div className="authors" aria-label="Paper authors">
-          <span><sup>1</sup> Author One</span>
-          <span><sup>2</sup> Author Two</span>
-          <span><sup>3</sup> Author Three</span>
-          <span><sup>4</sup> Author Four</span>
+          Anonymous Authors
         </div>
         <nav className="publication-links" aria-label="Publication resources">
-          <a href="#paper">Paper</a>
-          <a href="https://github.com/david-hp-0726/VerifLM" target="_blank" rel="noreferrer">
-            Code
-          </a>
-          <a href="#arxiv">arXiv</a>
+          <span className="publication-link-unavailable">Code — Coming Soon</span>
+          <span className="publication-link-unavailable">arXiv — Coming Soon</span>
         </nav>
       </section>
 

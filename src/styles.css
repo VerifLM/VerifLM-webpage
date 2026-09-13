@@ -122,7 +122,8 @@ h4 {
   margin-top: 1.5rem;
 }
 
-.publication-links a {
+.publication-links a,
+.publication-link-unavailable {
   background: #151515;
   border: 1px solid #151515;
   border-radius: 999px;
@@ -132,6 +133,11 @@ h4 {
   padding: 0.7rem 1.1rem;
   text-decoration: none;
   transition: 120ms ease;
+}
+
+.publication-link-unavailable {
+  cursor: default;
+  opacity: 0.7;
 }
 
 .publication-links a:hover {
