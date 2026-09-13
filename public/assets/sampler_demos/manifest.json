@@ -1,0 +1,320 @@
+{
+  "candidateCount": 3,
+  "defaultMode": "vlm_assisted",
+  "benchmarks": [
+        {
+      "id": "mug_on_rack_mesh_free",
+      "title": "Mug on Rack (mesh-free)",
+      "objectModel": "mesh-free",
+      "instruction": "Hang the mug on the rack by its handle.",
+      "activeObject": "mug",
+      "passiveObject": "rack",
+      "assetPrefix": "mug",
+      "basePath": "assets/sampler_demos/mug_on_rack_mesh_free",
+      "failedCandidates": {
+        "novlm": [
+          1,3
+        ]
+      },
+      "failureReasons": {
+        "novlm_1": "Task-inconsistent",
+        "novlm_3": "Task-inconsistent"
+      },
+      "samplingConstraints": {
+        "default": {
+          "translation": {
+            "x": { "assessment": "normal_search", "bias": "none" },
+            "y": { "assessment": "normal_search", "bias": "none" },
+            "z": { "assessment": "normal_search", "bias": "none" }
+          },
+          "rotation": {
+            "roll": { "assessment": "normal_search" },
+            "pitch": { "assessment": "normal_search" },
+            "yaw": { "assessment": "normal_search" }
+          }
+        },
+        "vlm_assisted": {
+          "translation": {
+            "x": { "assessment": "normal_search", "bias": "positive" },
+            "y": { "assessment": "correct", "bias": "none" },
+            "z": { "assessment": "correct", "bias": "negative" }
+          },
+          "rotation": {
+            "roll": { "assessment": "correct" },
+            "pitch": { "assessment": "correct" },
+            "yaw": { "assessment": "correct" }
+          }
+        }
+      },
+      "validationPrograms": {
+        "default": {
+          "mode": "settling",
+          "requiredContacts": ["mug", "rack"],
+          "forbiddenContacts": [],
+          "xyzRelations": {},
+          "positionDrift": {
+            "x": "moderate",
+            "y": "moderate",
+            "z": "moderate"
+          },
+          "orientationDrift": {
+            "roll": "moderate",
+            "pitch": "moderate",
+            "yaw": "moderate"
+          }
+        },
+        "vlm_assisted": {
+          "mode": "settling",
+          "requiredContacts": ["mug", "rack"],
+          "forbiddenContacts": ["mug", "table"],
+          "xyzRelations": {},
+          "positionDrift": {
+            "x": "strict",
+            "y": "strict",
+            "z": "permissive"
+          },
+          "orientationDrift": {
+            "roll": "moderate",
+            "pitch": "moderate",
+            "yaw": "moderate"
+          }
+        }
+      }
+    },
+    {
+      "id": "plate_on_stand_mesh_free",
+      "title": "Plate on Stand (mesh-free)",
+      "objectModel": "mesh-free",
+      "instruction": "Place the plate upright into a pair of insertion slots in the stand.",
+      "activeObject": "plate",
+      "passiveObject": "rack",
+      "assetPrefix": "plate",
+      "basePath": "assets/sampler_demos/plate_on_stand_mesh_free",
+      "failedCandidates": {
+        "novlm": [
+          1
+        ]
+      },
+      "failureReasons": {
+        "novlm_1": "Task-inconsistent"
+      },
+      "samplingConstraints": {
+        "default": {
+          "translation": {
+            "x": { "assessment": "normal_search", "bias": "none" },
+            "y": { "assessment": "normal_search", "bias": "none" },
+            "z": { "assessment": "normal_search", "bias": "none" }
+          },
+          "rotation": {
+            "roll": { "assessment": "normal_search" },
+            "pitch": { "assessment": "normal_search" },
+            "yaw": { "assessment": "normal_search" }
+          }
+        },
+        "vlm_assisted": {
+          "translation": {
+            "x": { "assessment": "correct", "bias": "none" },
+            "y": { "assessment": "correct", "bias": "none" },
+            "z": { "assessment": "normal_search", "bias": "negative" }
+          },
+          "rotation": {
+            "roll": { "assessment": "correct" },
+            "pitch": { "assessment": "correct" },
+            "yaw": { "assessment": "correct" }
+          }
+        }
+      },
+      "validationPrograms": {
+        "default": {
+          "mode": "settling",
+          "requiredContacts": ["mug", "rack"],
+          "forbiddenContacts": [],
+          "xyzRelations": {},
+          "positionDrift": {
+            "x": "moderate",
+            "y": "moderate",
+            "z": "moderate"
+          },
+          "orientationDrift": {
+            "roll": "moderate",
+            "pitch": "moderate",
+            "yaw": "moderate"
+          }
+        },
+        "vlm_assisted": {
+          "mode": "settling",
+          "requiredContacts": ["plate", "stand"],
+          "forbiddenContacts": ["plate", "table"],
+          "xyzRelations": {"z": ">"},
+          "positionDrift": {
+            "x": "strict",
+            "y": "strict",
+            "z": "moderate"
+          },
+          "orientationDrift": {
+            "roll": "strict",
+            "pitch": "strict",
+            "yaw": "strict"
+          }
+        }
+      }
+    },
+    {
+      "id": "mug_on_rack_mesh_based",
+      "title": "Mug on Rack (mesh-based)",
+      "objectModel": "mesh-based",
+      "instruction": "Hang the mug on the rack by its handle.",
+      "activeObject": "mug",
+      "passiveObject": "rack",
+      "assetPrefix": "mug",
+      "basePath": "assets/sampler_demos/mug_on_rack",
+      "failedCandidates": {
+        "novlm": [
+          1,3
+        ]
+      },
+      "failureReasons": {
+        "novlm_1": "Not hanging",
+        "novlm_3": "Not hanging"
+      },
+      "samplingConstraints": {
+        "default": {
+          "translation": {
+            "x": { "assessment": "normal_search", "bias": "none" },
+            "y": { "assessment": "normal_search", "bias": "none" },
+            "z": { "assessment": "normal_search", "bias": "none" }
+          },
+          "rotation": {
+            "roll": { "assessment": "normal_search" },
+            "pitch": { "assessment": "normal_search" },
+            "yaw": { "assessment": "normal_search" }
+          }
+        },
+        "vlm_assisted": {
+          "translation": {
+            "x": { "assessment": "normal_search", "bias": "negative" },
+            "y": { "assessment": "correct", "bias": "none" },
+            "z": { "assessment": "correct", "bias": "none" }
+          },
+          "rotation": {
+            "roll": { "assessment": "correct" },
+            "pitch": { "assessment": "normal_search" },
+            "yaw": { "assessment": "correct" }
+          }
+        }
+      },
+      "validationPrograms": {
+        "default": {
+          "mode": "settling",
+          "requiredContacts": ["mug", "rack"],
+          "forbiddenContacts": [],
+          "xyzRelations": {},
+          "positionDrift": {
+            "x": "moderate",
+            "y": "moderate",
+            "z": "moderate"
+          },
+          "orientationDrift": {
+            "roll": "moderate",
+            "pitch": "moderate",
+            "yaw": "moderate"
+          }
+        },
+        "vlm_assisted": {
+          "mode": "settling",
+          "requiredContacts": ["mug", "rack"],
+          "forbiddenContacts": ["mug", "table"],
+          "xyzRelations": {},
+          "positionDrift": {
+            "x": "strict",
+            "y": "strict",
+            "z": "permissive"
+          },
+          "orientationDrift": {
+            "roll": "moderate",
+            "pitch": "moderate",
+            "yaw": "moderate"
+          }
+        }
+      }
+    },
+    {
+      "id": "plate_on_stand_mesh_based",
+      "title": "Plate on Stand (mesh-based)",
+      "objectModel": "mesh-based",
+      "instruction": "Place the plate upright into a pair of insertion slots in the stand.",
+      "activeObject": "plate",
+      "passiveObject": "rack",
+      "assetPrefix": "plate",
+      "basePath": "assets/sampler_demos/plate_on_stand",
+      "failedCandidates": {
+        "vlm": [3],
+        "novlm": [3]
+      },
+      "failureReasons": {
+        "vlm_3": "Inserted into slots too far apart",
+        "novlm_3": "Inserted into slots too far apart"
+      },
+      "samplingConstraints": {
+        "default": {
+          "translation": {
+            "x": { "assessment": "normal_search", "bias": "none" },
+            "y": { "assessment": "normal_search", "bias": "none" },
+            "z": { "assessment": "normal_search", "bias": "none" }
+          },
+          "rotation": {
+            "roll": { "assessment": "normal_search" },
+            "pitch": { "assessment": "normal_search" },
+            "yaw": { "assessment": "normal_search" }
+          }
+        },
+        "vlm_assisted": {
+          "translation": {
+            "x": { "assessment": "correct", "bias": "none" },
+            "y": { "assessment": "correct", "bias": "none" },
+            "z": { "assessment": "normal_search", "bias": "negative" }
+          },
+          "rotation": {
+            "roll": { "assessment": "correct" },
+            "pitch": { "assessment": "major_revision" },
+            "yaw": { "assessment": "correct" }
+          }
+        }
+      },
+      "validationPrograms": {
+        "default": {
+          "mode": "settling",
+          "requiredContacts": ["mug", "rack"],
+          "forbiddenContacts": [],
+          "xyzRelations": {},
+          "positionDrift": {
+            "x": "moderate",
+            "y": "moderate",
+            "z": "moderate"
+          },
+          "orientationDrift": {
+            "roll": "moderate",
+            "pitch": "moderate",
+            "yaw": "moderate"
+          }
+        },
+        "vlm_assisted": {
+          "mode": "settling",
+          "requiredContacts": ["plate", "stand"],
+          "forbiddenContacts": ["plate", "table"],
+          "xyzRelations": {"z": ">"},
+          "positionDrift": {
+            "x": "strict",
+            "y": "strict",
+            "z": "moderate"
+          },
+          "orientationDrift": {
+            "roll": "strict",
+            "pitch": "strict",
+            "yaw": "strict"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "benchmarks": [
+    {
+      "id": "mug_on_rack",
+      "title": "Mug on Rack",
+      "instruction": "Hang the mug on the rack by its handle.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stage 1",
+          "basePath": "assets/gallary/mug_on_rack",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plate_on_stand",
+      "title": "Plate on Stand",
+      "instruction": "Place the plate upright in the plate stand slot.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stage 1",
+          "basePath": "assets/gallary/plate_on_stand",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lid_on_teapot",
+      "title": "Lid on Teapot",
+      "instruction": "Place the yellow lid on the teapot.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stage 1",
+          "basePath": "assets/gallary/lid_on_teapot",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mug_on_plate",
+      "title": "Mug on Plate",
+      "instruction": "Place the mug upright on the plate.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stage 1",
+          "basePath": "assets/gallary/mug_on_plate",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.jpeg",
+            "trajectory": "trajectory.mp4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mug_on_stand",
+      "title": "Mug on Stand",
+      "instruction": "Place the mug upside down on the stand.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stage 1",
+          "basePath": "assets/gallary/mug_on_stand",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pour_tea",
+      "title": "Pour Tea",
+      "instruction": "Pour tea from the teapot into the mug.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stage 1",
+          "basePath": "assets/gallary/pour_tea",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stack_cups",
+      "title": "Stack Cups",
+      "instruction": "Stack the red and green cups on the blue cup.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Stack red cup",
+          "basePath": "assets/gallary/stack_cups",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "edited_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        },
+        {
+          "id": "stage_2",
+          "title": "Stack green cup",
+          "basePath": "assets/gallary/stack_cups",
+          "assets": {
+            "source": "source_rgb1.png",
+            "edited": "edited_rgb1.png",
+            "trajectory": "trajectory1.mp4"
+          }
+        }
+      ]
+    },
+      {
+      "id": "plates_on_stand",
+      "title": "Plates on Stand",
+      "instruction": "Place both plates upright on the plate stand's insertion slots.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "title": "Place first plate",
+          "basePath": "assets/gallary/plates_on_stand",
+          "assets": {
+            "source": "source_rgb.png",
+            "edited": "goal_rgb.png",
+            "trajectory": "trajectory.mp4"
+          }
+        },
+        {
+          "id": "stage_2",
+          "title": "Place second plate",
+          "basePath": "assets/gallary/plates_on_stand",
+          "assets": {
+            "source": "source_rgb1.png",
+            "edited": "goal_rgb1.png",
+            "trajectory": "trajectory1.mp4"
+          }
+        }
+      ]
+    }
+  ]
+}
