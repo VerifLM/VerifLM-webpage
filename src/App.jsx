@@ -23,7 +23,7 @@ export default function App() {
   return (
     <main className="page">
       <section className="hero">
-        <p className="eyebrow">VerifLM</p>
+        <h2 className="eyebrow">VerifLM</h2>
         <h1>Physically Verified Image-Edit-Guided
           Goal Pose Generation for Robotic Manipulation</h1>
         <div className="authors" aria-label="Paper authors">
