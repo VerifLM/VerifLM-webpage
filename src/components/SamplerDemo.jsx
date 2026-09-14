@@ -711,7 +711,7 @@ function CandidatesStage({ benchmark, mode, selectedCandidate, onSelect }) {
         </div>
         <div className="candidate-row inactive">
           <div className="candidate-row-heading">
-            <h4>For comparison: {alternateMode.label} candidates</h4>
+            <h4>For comparison: candidates generated in {alternateMode.label} mode</h4>
           </div>
           <CandidatePicker
             candidates={alternateCandidates}
