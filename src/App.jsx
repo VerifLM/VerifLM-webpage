@@ -38,7 +38,7 @@ export default function App() {
       <section className="section card">
         <h2>Abstract</h2>
         <p className="section-intro">
-          Abstract Placeholder
+          Many manipulation goals are easier to visualize than to specify through explicit geometric constraints. We present VerifLM, a framework that converts image-edited goal configurations into physically verified 6D object poses. VerifLM recovers an initial active--passive relative pose from an edited image, then prompts a vision-language model to generate axis-wise sampling constraints and a task-specific validation program. Candidate poses are evaluated in MuJoCo, and the VLM selects the most task-consistent retained candidate. To operate without predefined object meshes or physical parameters, VerifLM reconstructs metric object geometry from RGB-D observations and predicts multiple joint physics hypotheses. Parallel-world validation evaluates candidates across geometry--physics variations and ranks them by the number of worlds in which they satisfy the validation program. We evaluate VerifLM on nine manipulation tasks. VerifLM achieves the highest task success on eight of nine tasks, with the largest performance gain on goals requiring precise orientation and contact relationships. 
         </p>
       </section>
 
