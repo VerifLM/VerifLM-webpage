@@ -44,9 +44,18 @@ export default function App() {
 
       <section className="section card">
         <h2>Overview Video</h2>
-        <div className="media placeholder-media hero-video" role="img" aria-label="Video placeholder">
-          <span>Video Coming Soon!</span>
-        </div>
+        <video
+          className="media hero-video"
+          controls
+          playsInline
+          preload="metadata"
+        >
+          <source
+            src={`${import.meta.env.BASE_URL}assets/overview.mp4`}
+            type="video/mp4"
+          />
+          Your browser does not support HTML video.
+        </video>
       </section>
 
       <section className="section">
